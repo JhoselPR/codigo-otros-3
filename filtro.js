@@ -8,8 +8,8 @@ const productos = [
   {nombre: "Zapato rojo", tipo: "zapato", color: "rojo", img: "./zapato-rojo.jpg"}
 ]
 
-const li = document.getElementsByName("lista-de-productos")
-const $i = document.querySelector('.input');
+const li = document.getElementById("lista-de-productos")//La función getElementsByName se reemplazó por getElementById 
+const $i = document.querySelector('.input');//Se añadió la clase input en el input del HTML
 
 for (let i = 0; i < productos.length; i++) {
   var d = document.createElement("div")
@@ -28,8 +28,8 @@ for (let i = 0; i < productos.length; i++) {
   li.appendChild(d)
 }
 
-displayProductos(productos)
-const botonDeFiltro = document.querySelector("button");
+// displayProductos(productos) La función displayProductos no está definida, por lo tanto se elimina
+const botonDeFiltro = document.querySelector("#button");//Seleccionamos el elemento button con el id #button del html
 
 botonDeFiltro.onclick = function() {
   while (li.firstChild) {
